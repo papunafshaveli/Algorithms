@@ -13,11 +13,11 @@ var pickGifts = function(gifts, k) {
          let el =  Math.floor(Math.sqrt(gifts.pop()))
          gifts.push(el)
          }
-         let count = 0;
+         let count = gifts.reduce((total, el) => {
+           return  total + el
+         });
 
-         for (let i = 0; i < gifts.length; i++){
-             count += gifts[i]
-         }
+         
     
     return count
 };
